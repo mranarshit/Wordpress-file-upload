@@ -37,7 +37,7 @@ foreach my $web(@site){$i++;
     if($web !~ /^(http|https):\/\//){
         $web = 'http://'.$web;
     }
-print "\n[$i] OK! Let's Work!\n\n";
+print "\n[$i] $web OK! Let's Work!\n\n";
 expadd($web,$user,$pass);#exploiting website :)
 } 
 sub expadd{
