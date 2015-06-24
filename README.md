@@ -9,4 +9,8 @@ WP Reflex-Gallery File Upload Exploiter : Reflex_Gallery.pl
 
 DesignFolio Theme File Upload Exploiter : designfolio.pl
 
+QAEngine Theme RCE : qaengine.pl
+
+QAEngine Theme RCE + Fork : qaengine_2.pl
+
 #Coded with perl by M-A (Mr_AnarShi-T)
