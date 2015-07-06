@@ -4,7 +4,7 @@
 # @version 1.0
 # @author M-A
 # @Bug Founder TUNISIEN CYBER (Miutex)
-# @link https://gist.githubusercontent.com/mranarshit/24afd4d6904e0d79601a/raw/52824332bf75234b86f67602ec1cdeef00cd7ac1/acf_plug.pl
+# @link https://raw.githubusercontent.com/mranarshit/Wordpress-file-upload/master/acf_up.pl
 # Perl Lov3r :)
 use LWP::UserAgent;
 use Getopt::Long;
